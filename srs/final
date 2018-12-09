@@ -1,0 +1,362 @@
+
+ 
+Software Requirements Specification for 
+Pharmacy Website
+Prepared by  : group 17  
+Shrouk Ragheb Amer 
+Sara abdelkhalek 
+Sara Khaled 
+Sara safwet 
+Heba Mustafa 
+Mohamed yaser 
+Mostafa Elasaal 
+Hady Sameh  
+Omar A. basyouni 
+
+
+ 
+Table of Contents
+Table of Contents	ii
+1.	Introduction	1
+1.1	Executive Summary	1
+1.2	Document Overview	1
+1.3	Abbreviation 	1
+1.4	References 	4
+2.	System Description	4
+2.1	Introduction	4
+2.2	Users 	4
+2.3	Modules	5
+3.	System Users	5
+3.1	Patients	5
+3.2	Medical Proessional	5
+3.3	Administrative User	6
+4.	System Modules	6
+4.1	Storage	6
+4.2	General User Area	7
+4.3	System Administration Area	8
+4.4	Passwords and Authentication Module……………………………………………………………8
+5.	System Functions	9
+5.1	Nonfunctional Requirements	9
+5.2	Functional Requirements	10
+6.	System Models	11
+6.1	Case Diagram	4
+6.2	Sequence Diagram	5
+
+
+
+
+
+ 
+1.	Introduction
+1.1	Executive Summary
+Symptoms checker is an online Service offer you the ability to check your health and Diagnoses your condition for some based on some questions, you can even search for advice from doctors you already know or we can recommend you a doctor for your status, you can also create your own profile that contains your body description and your history with any previous disease if you want or you can use our Service without Creating a profile. 
+1.2	Document Overview
+This document introduces online Website product plan. It introduces general System description, System Users, System Modules, System Functions, System models, Nonfunctional 
+Requirements, Domain Requirement and System Interfaces. 
+1.3	Abbreviation   
+Context boundary 	Boundary between the context of a system and those parts of the application domain that are irrelevant for the system 
+and its requirements 
+Context diagram 	1.A diagrammatic representation of a context model. 
+2. In Structured Analysis, the context diagram is the root of the data-flow diagram hierarchy. 
+System context 	The part of a system’s environment that is relevant for the definition as well as the understanding of the requirements of a system to be developed. 
+Domain 	A range of relevant things (for some given matter); for example, an application domain. 
+Feature 	A delimitable characteristic of a system that provides value for stakeholders. 
+Functional requirement 	A requirement concerning a result of behavior that shall be provided by a function of a system (or of a component or service). 
+Non-functional 
+requirement 	A quality requirement or a constraint 
+Model 	An abstract representation of an existing reality or a reality to be created. 
+Prototype 	1. In manufacturing: a piece which is built prior to the start of mass production. 2. In software engineering: An executable 
+piece of software that implements critical parts of a system in advance. In Requirements Engineering, prototypes are used as a means for requirements elicitation and validation. 
+Requirement 	1. A condition or capability needed by a user to solve a problem or achieve an objective. 
+2. A condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed documents.  
+Reliability 	The capability of a system to maintain a specified level of 
+functionality and performance when used under specified conditions. Reliability may be stated as a quality requirement. 
+Data-flow diagram 	A diagram modeling the functionality of a system or 
+component by processes (also called activities), data stores and data flows. Incoming data flows trigger processes which 
+then consume the received data, transform them, read/write persistent data held in data stores and then produce new data 
+    Security 	The capability of a system to protect (a) its data and resources against unauthorized use and (b) its legitimate users against denial of service. 
+    Sequence diagram 	A diagram type in UML which models the interactions between a selected set of objects and/or actors in the sequential order that those interactions occur 
+    Stakeholder 	A person or organization that has a (direct or indirect) influence on a system’s requirements. 
+Software requirements specification 	A requirements specification pertaining to a software system. Abbreviation: SRS 
+State machine 	A model describing the behavior of a system or component by a finite set of states and state transitions. State transitions are triggered by events and can in turn trigger actions and new events. 
+System boundary 	The boundary between a system and its surrounding 
+context 
+Usability 	The capability of a system to be understood, learned, used, and liked by its users. 
+Use case 	A description of the interactions possible between actors and a system that, when executed, provide added value. 
+Use case diagram 	A diagram type in UML that models the actors and the use cases of a system. 
+         User 	A person who uses the functionality provided by a system. Also called end user. 
+Verifiability (of requirements) 	The degree to which the fulfillment of a requirement by an implemented system can be checked, e.g., by defining acceptance test cases, measurements or inspection procedures. 
+Validation (of requirements) 	The process of checking whether documented requirements match the stakeholders’ needs. 
+
+
+1.4	References
+1.4.1	 https://www.gasq.org/files/content/gasq/downloads/certific ation/IREB/ireb_cpre_glossary_16_en.pdf 
+
+2.	System Description
+2.1	Introduction 
+
+
+
+
+2.2	Users
+2.2.1	Patient: 
+2.2.2	 Medical Professional
+2.2.3	Administrative 	User
+
+
+
+2.3	Modules
+2.3.1	Storage
+2.3.2	General User Area 
+2.3.3	System Administration Area
+2.3.4	Passwords and Authentication Module
+2.3.5	Module ADTs 
+3.	System Users
+3.1	Patient: 
+The Patient is expected to be Internet literate and be able to use a search engine. The main screen of the pharmacy patient Website interface will have the search function and a link to  
+View and Edit Profile 
+○ Doctor Search 
+○ Consult Doctor 
+○ Book Appointment 
+○ Syndrom Search  
+○ View Prescription 
+○ View Prescriptions (Medicine History) 
+○ Report Issue or Contact Support 
+3.2	 Medical Professional: 
+The Medical Professional is expected to be Internet literate and be able to use a search engine. The main screen of the pharmacy doctor Website 
+interface will have the search function and a link to  
+○ View and Edit Profile  
+○ Patient Charts 
+○ Report Issue or Contact Support 
+
+
+
+
+
+3.3	Administrative User:  
+The Admin is expected to be Windows literate and to be able to use button, pull-down menus, and similar components, as well as familiarity with database management systems. The main screen of the pharmacy, Website admin interface will have the console function and a link to 
+User Accreditation 
+○ Update Syndrome Database 
+○ Update Disease Database 
+○ Check Users Orders and Money Transfer 
+○ Respond to Issue or Ticket 
+ 
+ 
+4.	System Modules
+The system consists of following modules: 
+4.1	 Storage 
+4.1.1	Purpose:
+The purpose of this module is to provide a centralized place where information for the system can be stored, manipulated, and accessed. 
+4.1.2	Rationale:
+ This module is created to centralize and encapsulate all data storage and retrieval duties on the system.  This includes user profiles, success stories, banner ads, pictures, and messages. It also provides some services, such as authentication, network communication and search.
+4.1.3	High-Level Server Design:
+ The server module is broken down into lower-level modules, as shown in Figure is obvious, all communications from the client come through the communications module.  The provided interface of the high-level server component and the server communications module are thus identical. Two modules in the server handle administrator and user functions, respectively.  Each of these modules will be described in detail in following sections. 
+  
+4.2	General User Area 
+4.2.1	Purpose:
+The purpose of this module is to provide the user interface and view functions for the system.  This is the software with which the user directly interacts.  It communicates with the server to retrieve and modify persistent data when necessary. 
+4.2.2	Rationale:
+This module is created to provide the user interface to the system. 
+High-Level Module Design: 
+The user client is broken down into lower-level modules, as shown in 
+4.2.3	Provided Interface: 
+This module has no provided interfaces.  
+4.2.4	Required Interface:
+This module’s required interface is the union of the provided interfaces of the following components: 
+Administrative Module 
+User Module
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+4.3	System Administration Area 
+4.3.1	Purpose:
+The purpose of this module is to provide the Administration and view functions for the system.  This is the software with which the user directly interacts.  It communicates with the server to retrieve and modify persistent data when necessary. 
+4.3.2	Rationale:
+This module is created to provide the user interface to the back end of the system. 
+4.3.3	High-Level Module Design:
+The user client is broken down into lower-level modules, as shown in Figure.
+4.4	Passwords and Authentication Module 
+4.4.1	Purpose:
+The purpose of this module is to provide an authentication service, allowing callers to determine whether a username/password combination is valid, and a change-password service, allowing users to change their passwords. 
+4.4.2	Rationale: 
+This module is created to centralize and encapsulate password management and authentication services. 
+Required Interface boolean userExists(UserID userID); 
+Provided Interface void setPassword(UserID userId, Password password) throws 
+NoSuchUserException; 
+ 
+○ Description: Stores a user password of the given user ID. 
+○ Parameters: userID:  User ID of the user whose password is being stored. 
+    password: The password for that user. 
+○ Exceptions: NoSuchUserException: If the given user does not exist. 
+ 
+ 
+ 
+boolean logon(UserID userID, Password password) throws 
+BannedUserException; 
+ 
+○ Description: Determines whether a given user/password combination is valid or not.  For security reasons, the incorrect portion of the combination (i.e. user or password) is not given. 
+○ Parameters:  userID:  User ID of the user whose password is being checked. password: The presumed password for that user.Returns: True if the user ID/password combination is correct, false otherwise. 
+○ Exceptions:  BannedUserException: If the given user has been banned. 
+ 
+ 
+void logoff(UserID userID) throws NoSuchUserException, 
+UserNotLoggedOnException; 
+ 
+○ Description:  Logs a user off the system. 
+○ Parameters:  userID:  User ID of the user who is logging off. 
+○ Exceptions: NoSuchUserException: If the given user does not exist. UserNotLoggedOnException: If the given user is not logged on. 
+ 
+ 
+4.5	Module ADTs 
+UserID: See Profiles Module 
+ 
+typedef Password String; 
+
+5.	System Functions
+5.1	 Non-Functional Requirements: 
+5.1.1	 Performance 
+The system must be interactive, and the delays involved must be less. So, in every action-response of the system, there are no immediate delays. In case of opening windows forms, of popping error messages and saving the settings or sessions there is delay much below 2 seconds, in case of opening databases, sorting questions and evaluation there are no delays and the operation is performed in less than 2 seconds for opening, sorting, computing, posting > 95% of the files. Also, when connecting to the server the delay is based editing on the distance of the 2 systems and the configuration between them so there is high probability that there will be or not a successful connection in less than 20 seconds for sake of good communication. 
+5.1.2	Safety 
+Information transmission should be securely transmitted to server without any changes in information 
+5.1.3	 Reliability 
+As the system provide the right tools for discussion, problem solving it must be made sure that the system is reliable in its operations and for securing the sensitive details. 
+Software Quality Attributes 
+5.1.4	Availability 
+If the internet service gets disrupted while sending information to the server, the information can be send again for verification. 
+5.1.5	 Security 
+The main security concern is for users account hence proper login mechanism should be used to avoid hacking. The tablet id registration is way to spam check for increasing the security. Hence, security is provided from unwanted use of recognition software. 
+5.1.6	 Usability 
+As the system is easy to handle and navigates in the most expected way with no delays. In that case the system program reacts accordingly and transverses quickly between its states. 
+5.2	Functional Requirements  
+5.2.1	User Profile:  
+Users can register to the system before they can use the website, in urgent cases user can skip making profile. 
+The profile will contain user’s personal information such as: name, age, number,…….etc. Also, the profile will contain user’s medical information. Users’ profiles show all the activities, as user can review all the related illness. 
+5.2.2	Choose symptom:  
+“Website” will supply all kinds of symptoms, which will appear in the front page. User must choose the exact symptom of the illness & answer any question related to it, to get the right treatment. 
+Choosing symptoms will be made by three phases, first “website” will show options of symptoms and user must choose the main symptom. Second,” website” will supply questions about the basic detailed of the symptoms, third, “website” will support detailed questions 
+User must answer carefully and honestly the questions, to get the right treatment.  
+After these three phases the right medicine will show immediately to user. If User’s Condition is critical or need an extra radiology and medical analysis, the “website” will automatically show the link of doctors’ contacts page. 
+
+
+
+5.2.3	Doctors’ Contacts:  
+ “Website” will supply doctors’ contacts of each medical field. In Case user have an emergency or want to meet doctors we will make it easy for him by gathering doctor’s contact of each symptom. 
+“website” will supply all doctors’ contacts in all medical fields which will be in categories and user should choose the right field for his condition, then the user will find doctor’s contacts in this field in different places. 
+5.2.4	User Feedback:  
+“Website” will supply feedback form, so users can tell their opinion about everything in “website” as we will improve it continuously to make it more friendly and helpful for the users. 
+5.2.5	Multi Language Support:  
+“Website” system interface allows two languages, the main language is Arabic, and it also supports English as well. 
+6.	System Models
+6.1	    Case diagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6.2	Sequence diagram
+          
+
+                                                                                                    
+                                                         
+
+
+                                                       
+
+
+
+
+
+
+7.	Domain Requirements
+7.1	Software requirements :
+  
+7.1.1	Windows 7 or above operating system 
+7.1.2	JRE 1.8 
+  
+7.1.3	MySQL server 
+  
+7.2	Hardware Requirements: 
+  
+7.2.1	Core i3 processor 
+  
+7.2.2	2GB Ram 
+  
+7.2.3	20GB of hard disk space in terminal machines 
+  
+7.3	User Interfaces
+<Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Define the software components for which a user interface is needed. Details of the user interface design should be documented in a separate user interface specification.>
+7.4	Hardware Interfaces
+<Describe the logical and physical characteristics of each interface between the software product and the hardware components of the system. This may include the supported device types, the nature of the data and control interactions between the software and the hardware, and communication protocols to be used.>
+7.5	Software Interfaces
+<Describe the connections between this product and other specific software components (name and version), including databases, operating systems, tools, libraries, and integrated commercial components. Identify the data items or messages coming into the system and going out and describe the purpose of each. Describe the services needed and the nature of communications. Refer to documents that describe detailed application programming interface protocols. Identify data that will be shared across software components. If the data sharing mechanism must be implemented in a specific way (for example, use of a global data area in a multitasking operating system), specify this as an implementation constraint.>
+7.6	Communications Interfaces
+<Describe the requirements associated with any communications functions required by this product, including e-mail, web browser, network server communications protocols, electronic forms, and so on. Define any pertinent message formatting. Identify any communication standards that will be used, such as FTP or HTTP. Specify any communication security or encryption issues, data transfer rates, and synchronization mechanisms.>
+8.	System Features
+<This template illustrates organizing the functional requirements for the product by system features, the major services provided by the product. You may prefer to organize this section by use case, mode of operation, user class, object class, functional hierarchy, or combinations of these, whatever makes the most logical sense for your product.>
+8.1	System Feature 1
+<Don’t really say “System Feature 1.” State the feature name in just a few words.>
+4.1.1	Description and Priority
+	<Provide a short description of the feature and indicate whether it is of High, Medium, or Low priority. You could also include specific priority component ratings, such as benefit, penalty, cost, and risk (each rated on a relative scale from a low of 1 to a high of 9).>
+4.1.2	Stimulus/Response Sequences
+	<List the sequences of user actions and system responses that stimulate the behavior defined for this feature. These will correspond to the dialog elements associated with use cases.>
+4.1.3	Functional Requirements
+	<Itemize the detailed functional requirements associated with this feature. These are the software capabilities that must be present in order for the user to carry out the services provided by the feature, or to execute the use case. Include how the product should respond to anticipated error conditions or invalid inputs. Requirements should be concise, complete, unambiguous, verifiable, and necessary. Use “TBD” as a placeholder to indicate when necessary information is not yet available.>
+	
+	<Each requirement should be uniquely identified with a sequence number or a meaningful tag of some kind.>
+	
+REQ-1:	
+REQ-2:	
+8.2	System Feature 2 (and so on)
+9.	Other Nonfunctional Requirements
+9.1	Performance Requirements
+<If there are performance requirements for the product under various circumstances, state them here and explain their rationale, to help the developers understand the intent and make suitable design choices. Specify the timing relationships for real time systems. Make such requirements as specific as possible. You may need to state performance requirements for individual functional requirements or features.>
+9.2	Safety Requirements
+<Specify those requirements that are concerned with possible loss, damage, or harm that could result from the use of the product. Define any safeguards or actions that must be taken, as well as actions that must be prevented. Refer to any external policies or regulations that state safety issues that affect the product’s design or use. Define any safety certifications that must be satisfied.>
+9.3	Security Requirements
+<Specify any requirements regarding security or privacy issues surrounding use of the product or protection of the data used or created by the product. Define any user identity authentication requirements. Refer to any external policies or regulations containing security issues that affect the product. Define any security or privacy certifications that must be satisfied.>
+9.4	Software Quality Attributes
+<Specify any additional quality characteristics for the product that will be important to either the customers or the developers. Some to consider are: adaptability, availability, correctness, flexibility, interoperability, maintainability, portability, reliability, reusability, robustness, testability, and usability. Write these to be specific, quantitative, and verifiable when possible. At the least, clarify the relative preferences for various attributes, such as ease of use over ease of learning.>
+9.5	Business Rules
+<List any operating principles about the product, such as which individuals or roles can perform which functions under specific circumstances. These are not functional requirements in themselves, but they may imply certain functional requirements to enforce the rules.>
+10.	Other Requirements
+<Define any other requirements not covered elsewhere in the SRS. This might include database requirements, internationalization requirements, legal requirements, reuse objectives for the project, and so on. Add any new sections that are pertinent to the project.>
+Appendix A: Glossary
+<Define all the terms necessary to properly interpret the SRS, including acronyms and abbreviations. You may wish to build a separate glossary that spans multiple projects or the entire organization, and just include terms specific to a single project in each SRS.>
+Appendix B: Analysis Models
+<Optionally, include any pertinent analysis models, such as data flow diagrams, class diagrams, state-transition diagrams, or entity-relationship diagrams.>
+Appendix C: To Be Determined List
+<Collect a numbered list of the TBD (to be determined) references that remain in the SRS so they can be tracked to closure.>
